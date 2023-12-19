@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Book Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#03a6f3">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'Mainproject/Css/loader.css'%}">
+    <link rel="stylesheet" href="{% static 'Mainproject/Css/bootstrap.min.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{%static 'Mainproject/Css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{%static 'Mainproject/Css/styles.css'%}">
+</head>
+
+<body>
+    <div id="circle">
+        <div class="loader">
+          <div class="loader">
+            <div class="loader">
+              <div class="loader"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <header>
+        <div class="main-menu">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="{% url 'Home'%}"><h4 style="font-weight: bold;">BOOK RECOMMENDATION</h4></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="navbar-brand active">
+                                <a href="{% url 'Home' %}" class="nav-link" >Home</a>
+                            </li>
+                            <li class="navbar-brand">
+                                <a href="{% url 'Chart' %}" class="nav-link">Chart</a>
+                            </li>
+                            <li class="navbar-brand">
+                                <a href="{% url 'About' %}" class="nav-link">About Us</a>
+                            </li>
+                            
+                        </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="breadcrumb">
+        <div class="container">
+            <a class="breadcrumb-item" href="{% url 'Home' %}">Home</a>
+            <span class="breadcrumb-item active">Recommended Books</span>
+        </div>
+    </div>
+    <section class="recent-book-sec">
+        <div class="container">
+            <div class="title">
+                <h2>RECOMMENDED BOOKS</h2>
+                <hr>
+            </div>
+            {% block Algoresult %}
+
+            {% endblock Algoresult %}
+        </div>
+    </section>
+    <footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
+        <div class="copy-right">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <h5>Designed By Group X
+                            <a
+                            href="https:www.instagram.com/stg_reigns"
+                            class="tm-text-gray"
+                            rel="sponsored"
+                            target="_parent"
+                            ><span><i class="fa fa-heart" style="color: red;"></i></span></a>
+                          </h5>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="share align-middle">
+                              <span class="fb"><a href="#"><i class="fa fa-facebook-official"></i></a></span>
+                              <span class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></span>
+                              <span class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></span>
+                              <span class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></span>
+                              <span class="google"><a href="#"><i class="fa fa-google-plus"></i></a></span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </footer>
+    <script>
+        $(window).on('load',function(){
+            $('.loader').fadeOut('slow');
+        })
+    </script>
+    <script src="{%static 'Mainproject/Js/jquery.min.js'%}"></script>
+    <script src="{%static 'Mainproject/Js/bootstrap.min.js'%}"></script>
+    <script type="text/javascript" src="{%static 'Mainproject/Js/owl.carousel.min.js'%}"></script>
+    <script src="{%static 'Mainproject/Js/custom.js'%}></script>
+</body>
+</html>

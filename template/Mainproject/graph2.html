@@ -1,0 +1,63 @@
+{% extends 'graph.html' %} {% block graphtitle %}Graph 2{% endblock graphtitle %}
+{% block graph2 %}
+<section class="Chart">
+  <div class="container">
+    <div class="CHART">
+      <p><legend>Book Title :-</legend></p>
+      <p>{{title}}</p>
+      <canvas id="myChart2" width="10" height="10"></canvas>
+    </div>
+  </div>
+</section>
+
+<script>
+  var labels=["text_reviews_count", "ratings_count"]
+  var data = [];
+
+  var d1 = [{{graph2data}}];
+  data=d1[0];
+  console.log(data)
+  var title="{{title}}";
+  var ctx = document.getElementById("myChart2").getContext("2d");
+  var myChart = new Chart(ctx, {
+    type: "doughnut",
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: title,
+          data: data,
+          backgroundColor: [
+            "rgba(255, 99, 132, 0.2)",
+            "rgba(54, 162, 235, 0.2)",
+            "rgba(255, 206, 86, 0.2)",
+            "rgba(75, 192, 192, 0.2)",
+            "rgba(153, 102, 255, 0.2)",
+            "rgba(255, 159, 64, 0.2)",
+          ],
+          borderColor: [
+            "rgba(255, 99, 132, 1)",
+            "rgba(54, 162, 235, 1)",
+            "rgba(255, 206, 86, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(153, 102, 255, 1)",
+            "rgba(255, 159, 64, 1)",
+          ],
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+          },
+        ],
+      },
+    },
+  });
+</script>
+{% endblock graph2 %}

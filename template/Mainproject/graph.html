@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chart | {% block graphtitle %}{% endblock graphtitle %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#03a6f3" />
+    <link rel="stylesheet" href="{% static 'Mainproject/Css/bootstrap.min.css'%}"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'Mainproject/Css/owl.carousel.min.css'%}" />
+    <link rel="stylesheet" href="{% static 'Mainproject/Css/styles.css'%}" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="main-menu">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="{% url 'Home'%}"><h4 style="font-weight: bold">BOOK RECOMMENDATION</h4></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="navbar-brand">
+                  <a href="{% url 'Home' %}" class="nav-link">Home</a>
+                </li>
+                <li class="navbar-brand active">
+                  <a href="{% url 'Chart' %}" class="nav-link">Chart</a>
+                </li>
+                <li class="navbar-brand">
+                  <a href="{% url 'About' %}" class="nav-link">About Us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="breadcrumb">
+      <div class="container">
+        <a class="breadcrumb-item" href="{% url 'Home' %}">Home</a>
+        <span class="breadcrumb-item active">Chart</span>
+      </div>
+    </div>
+
+    <div style="padding-left: 30%; display: flex">
+      <section
+        class="container-fluid align-items-center justify-content-center"
+      >
+        <div class="card-deck text-center">
+          <div class="card border-success mb-3" style="max-width: 18rem">
+            <div class="card-header bg-transparent border-success">Chart 1</div>
+            <div class="card-body text-success">
+              <h5 class="card-title">Chart between</h5>
+              <p class="card-text">Books and Ratings.</p>
+            </div>
+            <a href="{% url 'Chart_1' %}" class="card-footer bg-transparent border-success"
+              >Show</a>
+          </div>
+          <div class="card border-success mb-3" style="max-width: 18rem">
+            <div class="card-header bg-transparent border-success">Chart 2</div>
+            <div class="card-body text-success">
+              <h5 class="card-title">Chart between</h5>
+              <p class="card-text">Review count and Rating count.</p>
+            </div>
+            <a href="{% url 'Chart_2' %}" class="card-footer bg-transparent border-success"
+              >Show</a
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+    {% block graph1 %}
+    {% endblock graph1 %}
+    {% block graph2 %}
+    {% endblock graph2 %}
+  </body>
+  <script src="{% static 'Mainproject/Js/jquery.min.js' %}"></script>
+  <script src="{% static 'Mainproject/Js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'Mainproject/Js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'Mainproject/Js/custom.js' %}"></script>
+  <footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
+    <div class="copy-right">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>
+              Designed By Group X
+              <a
+                href="https:www.instagram.com/stg_reigns"
+                class="tm-text-gray"
+                rel="sponsored"
+                target="_parent"
+                ><span><i class="fa fa-heart" style="color: red"></i></span
+              ></a>
+            </h5>
+          </div>
+          <div class="col-md-6">
+            <div class="share align-middle">
+              <span class="fb"
+                ><a href="#"><i class="fa fa-facebook-official"></i></a
+              ></span>
+              <span class="instagram"
+                ><a href="#"><i class="fa fa-instagram"></i></a
+              ></span>
+              <span class="twitter"
+                ><a href="#"><i class="fa fa-twitter"></i></a
+              ></span>
+              <span class="pinterest"
+                ><a href="#"><i class="fa fa-pinterest"></i></a
+              ></span>
+              <span class="google"
+                ><a href="#"><i class="fa fa-google-plus"></i></a
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</html>

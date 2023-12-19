@@ -1,0 +1,14 @@
+{% extends 'base2.html' %}
+{% block Algoresult %}
+<div class="row">
+  {% for b in books%}
+  <div class="col-lg-2 col-md-3 col-sm-4">
+    <div class="item">
+      <img src="{{b.img}}" alt="img" />
+      <h3><a href="#">{{b.name}}</a></h3>
+      <br /><br />
+    </div>  
+  </div>
+  {% endfor %}
+</div>
+{% endblock Algoresult %}

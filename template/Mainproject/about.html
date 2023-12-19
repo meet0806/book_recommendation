@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#03a6f3">
+    <link rel="stylesheet" href="{% static 'Mainproject/Css/bootstrap.min.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'Mainproject/Css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Mainproject/Css/styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="main-menu">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="#" style="font-size: 30px; background-color:rgb(238, 102, 102); padding-left: 5px; border-radius: 10px; width:125px;">GROUP X</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="navbar-brand">
+                                <a href="{% url 'Home' %}" class="nav-link">Home</a>
+                            </li>
+                            <li class="navbar-brand">
+                                <a href="/chart" class="nav-link">Chart</a>
+                            </li>
+                            <li class="navbar-brand active">
+                                <a href="/about" class="nav-link">About Us</a>
+                            </li>
+                          </ul>
+                   </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="breadcrumb">
+        <div class="container">
+            <a class="breadcrumb-item" href="{% url 'Home' %}">Home</a>
+            <span class="breadcrumb-item active">About Us</span>
+        </div>
+    </div>
+    <section>             
+          <div class="album py-5 bg-light">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img
+                      class="card-img-top"
+                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                      alt="Thumbnail [100%x225]"
+                      style="height: 225px; width: 100%; display: block"
+                      src="https://source.unsplash.com/1600x900/?man"
+                      data-holder-rendered="true"
+                    />
+                    <div class="card-body">
+                      <p class="card-text">
+                        He is Meet Bros.
+                      </p>
+                      <!-- <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">
+                            View
+                          </button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">
+                            Edit
+                          </button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img
+                      class="card-img-top"
+                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                      alt="Thumbnail [100%x225]"
+                      src="https://source.unsplash.com/1600x900/?man1"
+                      data-holder-rendered="true"
+                      style="height: 225px; width: 100%; display: block"
+                    />
+                    <div class="card-body">
+                      <p class="card-text">
+                        He is Nimish Nimo.
+                      </p>
+                      <!-- <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">
+                            View
+                          </button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">
+                            Edit
+                          </button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img
+                        class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]"
+                        src="https://source.unsplash.com/1600x900/?man2"
+                        data-holder-rendered="true"
+                        style="height: 225px; width: 100%; display: block"
+                      />
+                      <div class="card-body">
+                        <p class="card-text">
+                          He is Aman Dubs.
+                        </p>
+                        <!-- <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                              View
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                              Edit
+                            </button>
+                          </div>
+                          <small class="text-muted">9 mins</small>
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img
+                        class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]"
+                        src="https://source.unsplash.com/1600x900/?man3"
+                        data-holder-rendered="true"
+                        style="height: 225px; width: 100%; display: block"
+                      />
+                      <div class="card-body">
+                        <p class="card-text">
+                          He is Saurabh mini.
+                        </p>
+                        <!-- <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                              View
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                              Edit
+                            </button>
+                          </div>
+                          <small class="text-muted">9 mins</small>
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+    <footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
+        <div class="copy-right">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <h5>Designed By Group X
+                            <a
+                            href="https:www.instagram.com/stg_reigns"
+                            class="tm-text-gray"
+                            rel="sponsored"
+                            target="_parent"
+                            ><span><i class="fa fa-heart" style="color: red;"></i></span></a>
+                          </h5>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="share align-middle">
+                              <span class="fb"><a href="#"><i class="fa fa-facebook-official"></i></a></span>
+                              <span class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></span>
+                              <span class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></span>
+                              <span class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></span>
+                              <span class="google"><a href="#"><i class="fa fa-google-plus"></i></a></span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </footer>
+    <script src="{% static 'Mainproject/Js/jquery.min.js' %}"></script>
+    <script src="{% static 'Mainproject/Js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Mainproject/Js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'Mainproject/Js/custom.js' %}"></script>
+</body>
+
+</html>
